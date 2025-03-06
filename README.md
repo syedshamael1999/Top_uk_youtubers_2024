@@ -1,4 +1,4 @@
-# Top UK YouTubers 2024
+# Data Analysis Project: Top UK YouTubers 2024
 
 ![excel-to-powerbi-animated-diagram](Assets/images/kaggle_to_powerbi.gif)
 
