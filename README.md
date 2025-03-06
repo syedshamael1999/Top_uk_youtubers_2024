@@ -148,8 +148,8 @@ This is the stage where you have a scan of what's in the data, errors, inconcsis
 
 - What are your initial observations with this dataset? What's caught your attention so far? 
 
-1. There are at least 4 columns that contain the data we need for this analysis, which signals we have everything we need from the file without needing to contact the client for any more data. 
-2. The first column contains the channel ID with what appears to be channel IDS, which are separated by a @ symbol - we need to extract the channel names from this.
+1. There are at least 4 columns containing the necessary data for this analysis, indicating that we have all the required information from the file without needing to reach out to the client for additional data.
+2. The first column contains the channel ID with what appears to be channel IDs, which are separated by a @ symbol - we need to extract the channel names from this.
 3. Some of the cells and header names are in a different language - we need to confirm if these columns are needed, and if so, we need to address them.
 4. We have more data than we need, so some of these columns would need to be removed
 
@@ -158,7 +158,7 @@ This is the stage where you have a scan of what's in the data, errors, inconcsis
 
 
 ## Data cleaning 
-- What do we expect the clean data to look like? (What should it contain? What contraints should we apply to it?)
+- What do we expect the clean data to look like?
 
 The aim is to refine our dataset to ensure it is structured and ready for analysis. 
 
@@ -210,7 +210,7 @@ And here is a tabular representation of the expected schema for the clean data:
 
 -- 1.
 SELECT
-    SUBSTRING(NOMBRE, 1, CHARINDEX('@', NOMBRE) -1) AS channel_name,  -- 2.
+    SUBSTRING(NOMBRE, 1, CHARINDEX('@', NOMBRE) -1) AS channel_name,
     total_subscribers,
     total_views,
     total_videos
@@ -234,7 +234,7 @@ CREATE VIEW view_uk_youtubers_2024 AS
 
 -- 2.
 SELECT
-    CAST(SUBSTRING(NOMBRE, 1, CHARINDEX('@', NOMBRE) -1) AS VARCHAR(100)) AS channel_name, -- 2. 
+    CAST(SUBSTRING(NOMBRE, 1, CHARINDEX('@', NOMBRE) -1) AS VARCHAR(100)) AS channel_name, 
     total_subscribers,
     total_views,
     total_videos
@@ -505,7 +505,7 @@ Here are the key questions we need to answer for our marketing client:
 
 ### Notes
 
-For this analysis, we'll prioritize analysing the metrics that are important in generating the expected ROI for our marketing client, which are the YouTube channels wuth the most 
+For this analysis, we'll prioritize analysing the metrics that are important in generating the expected ROI for our marketing client, which are the YouTube channels with the most 
 
 - subscribers
 - total views
@@ -802,10 +802,10 @@ ORDER BY
 We discovered that 
 
 
-1. NoCopyrightSOunds, Dan Rhodes and DanTDM are the channnels with the most subscribers in the UK
-2. GRM Daily, Man City and Yogscast are the channels with the most videos uploaded
-3. DanTDM, Dan RHodes and Mister Max are the channels with the most views
-4. Entertainment channels are useful for broader reach, as the channels posting consistently on their platforms and generating the most engagement are focus on entertainment and music 
+1. NoCopyrightSounds, Dan Rhodes, and DanTDM have the highest subscriber count in the UK.
+2. GRM Daily, Man City, and Yogscast have uploaded the most videos.
+3. DanTDM, Dan Rhodes, and Mister Max have the highest total views.
+4. Entertainment channels offer a wider reach, as those consistently posting and driving the most engagement mainly focus on entertainment and music.
 
 
 
@@ -814,19 +814,20 @@ We discovered that
 
 - What do you recommend based on the insights gathered? 
   
-1. Dan Rhodes is the best YouTube channel to collaborate with if we want to maximize visbility because this channel has the most YouTube subscribers in the UK
-2. Although GRM Daily, Man City and Yogcasts are regular publishers on YouTube, it may be worth considering whether collaborating with them with the current budget caps are worth the effort, as the potential return on investments is significantly lower compared to the other channels.
-3. Mister Max is the best YouTuber to collaborate with if we're interested in maximizing reach, but collaborating with DanTDM and Dan Rhodes may be better long-term options considering the fact that they both have large subscriber bases and are averaging significantly high number of views.
-4. The top 3 channels to form collaborations with are NoCopyrightSounds, DanTDM and Dan Rhodes based on this analysis, because they attract the most engagement on their channels consistently.
+1. Dan Rhodes is the ideal YouTube channel for maximizing visibility, as it has the highest subscriber count in the UK.
+2. While GRM Daily, Man City, and Yogscast frequently publish content, their lower potential ROI raises questions about whether collaboration within current budget constraints is worthwhile.
+3. Mister Max is the best choice for maximizing reach, but DanTDM and Dan Rhodes may be better long-term partners due to their large subscriber bases and consistently high average views.
+4. Based on this analysis, the top three channels for collaboration are NoCopyrightSounds, DanTDM, and Dan Rhodes, as they consistently generate the highest engagement.
+
 
 
 ### Potential ROI 
 - What ROI do we expect if we take this course of action?
 
-1. Setting up a collaboration deal with Dan Rhodes would make the client a net profit of $1,065,000 per video
-2. An influencer marketing contract with Mister Max can see the client generate a net profit of $1,276,000
+1. A collaboration deal with Dan Rhodes could generate a net profit of $1,065,000 per video for the client.
+2. An influencer marketing contract with Mister Max could yield a net profit of $1,276,000.
 3. If we go with a product placement campaign with DanTDM, this could  generate the client approximately $484,000 per video. If we advance with an influencer marketing campaign deal instead, this would make the client a one-off net profit of $404,000.
-4. NoCopyrightSounds could profit the client $642,000 per video too (which is worth considering) 
+4. NoCopyrightSounds could also generate a net profit of $642,000 per video, making it a worthwhile option to consider.
 
 
 
@@ -834,14 +835,14 @@ We discovered that
 ### Action plan
 - What course of action should we take and why?
 
-Based on our analysis, we beieve the best channel to advance a long-term partnership deal with to promote the client's products is the Dan Rhodes channel. 
+Based on our analysis, we believe Dan Rhodes is the best channel for a long-term partnership to promote the client’s products.
 
-We'll have conversations with the marketing client to forecast what they also expect from this collaboration. Once we observe we're hitting the expected milestones, we'll advance with potential partnerships with DanTDM, Mister Max and NoCopyrightSounds channels in the future.   
+We will discuss expectations with the marketing client to align on goals. Once we achieve the anticipated milestones, we will explore potential collaborations with DanTDM, Mister Max, and NoCopyrightSounds in the future.
 
 - What steps do we take to implement the recommended decisions effectively?
 
 
-1. Reach out to the teams behind each of these channels, starting with Dan Rhodes
-2. Negotiate contracts within the budgets allocated to each marketing campaign
-3. Kick off the campaigns and track each of their performances against the KPIs
-4. Review how the campaigns have gone, gather insights and optimize based on feedback from converted customers and each channel's audiences 
+1. Contact the teams behind these channels, starting with Dan Rhodes.
+2. Negotiate contracts within the allocated marketing budgets.
+3. Launch the campaigns and monitor performance against KPIs.
+4. Evaluate campaign results, gather insights, and optimize based on feedback from converted customers and audience engagement.
